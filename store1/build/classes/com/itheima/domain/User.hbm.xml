@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+ <hibernate-mapping>
+   <!-- 建立表之间的映射 -->
+   <class name="com.itheima.domain.User" table="sys_user">
+       <!-- 创建类中的属性与表的主键对应  -->
+       <id name="user_id" column="user_id">
+          <generator class="native"></generator>
+       </id>
+       <!-- 建立类中的普通属性和表字段对应 -->
+       <property name="user_code" column="user_code"></property>
+       <property name="user_name" column="user_name"></property>
+       <property name="user_password" column="user_password"></property>
+       <property name="user_state" column="user_state"></property>    
+    </class>
+ </hibernate-mapping>
